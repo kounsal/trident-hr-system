@@ -1,5 +1,7 @@
-# HR Workflow Designer
+# HR Workflow Designer 
 Live url - https://hr.attendanceplus.tech/
+
+
 A polished React + TypeScript prototype for the Tredence Full Stack Engineering case study.
 
 This project lets an HR admin visually design internal workflows such as onboarding, leave approval, and document verification. It combines a React Flow canvas, typed node configuration forms, mock API integration, live graph validation, and a workflow sandbox for execution testing.
