@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@500;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --font-display: 'Syne', 'Segoe UI', sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --ink-strong: #0f1722;
+  --ink-base: #203142;
+  --ink-soft: #607183;
+  --ink-faint: #8090a0;
+
+  --paper: #f7f1e6;
+  --paper-muted: #efe3d1;
+  --paper-solid: #fff9ef;
+  --paper-elevated: rgba(255, 249, 239, 0.82);
+  --paper-line: rgba(58, 75, 95, 0.15);
+
+  --canvas: #0b1320;
+  --canvas-2: #152234;
+  --canvas-line: rgba(150, 168, 189, 0.18);
+
+  --amber: #c67b30;
+  --amber-soft: rgba(198, 123, 48, 0.16);
+  --blue: #3d64ff;
+  --blue-soft: rgba(61, 100, 255, 0.14);
+  --teal: #0d8b72;
+  --teal-soft: rgba(13, 139, 114, 0.15);
+  --coral: #c6604a;
+  --coral-soft: rgba(198, 96, 74, 0.16);
+  --sage: #627a5b;
+  --sage-soft: rgba(98, 122, 91, 0.16);
+
+  --danger: #b14f3d;
+  --danger-soft: rgba(177, 79, 61, 0.13);
+  --success: #0a7a64;
+  --success-soft: rgba(10, 122, 100, 0.13);
+  --info: #3158ca;
+  --info-soft: rgba(49, 88, 202, 0.12);
+  --focus: #226cff;
+
+  --shadow-lg: 0 32px 60px rgba(18, 28, 40, 0.12);
+  --shadow-md: 0 18px 34px rgba(18, 28, 40, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  min-width: 320px;
+  font-family: var(--font-body);
+  color: var(--ink-base);
+  background:
+    radial-gradient(circle at top left, rgba(239, 227, 209, 0.92), transparent 28%),
+    radial-gradient(circle at top right, rgba(61, 100, 255, 0.14), transparent 24%),
+    linear-gradient(180deg, #f7f1e6 0%, #efe8db 58%, #e8edf2 100%);
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 118px,
+      rgba(114, 130, 149, 0.05) 118px,
+      rgba(114, 130, 149, 0.05) 119px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      transparent 0,
+      transparent 118px,
+      rgba(114, 130, 149, 0.045) 118px,
+      rgba(114, 130, 149, 0.045) 119px
+    );
+  opacity: 0.55;
+}
+
+body::after {
+  inset: auto 0 0 0;
+  height: 42vh;
+  background: radial-gradient(circle at 50% 100%, rgba(61, 100, 255, 0.12), transparent 58%);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--amber-soft);
+  color: var(--ink-strong);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
