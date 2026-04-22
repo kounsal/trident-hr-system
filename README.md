@@ -1,5 +1,5 @@
 # HR Workflow Designer
-
+Live url - https://hr.attendanceplus.tech/
 A polished React + TypeScript prototype for the Tredence Full Stack Engineering case study.
 
 This project lets an HR admin visually design internal workflows such as onboarding, leave approval, and document verification. It combines a React Flow canvas, typed node configuration forms, mock API integration, live graph validation, and a workflow sandbox for execution testing.
@@ -228,12 +228,6 @@ docker run --rm -p 8080:80 trident-workflow-designer
 
 Then open `http://localhost:8080`.
 
-### Notes
-
-- Uses a multi-stage Docker build
-- Builds the Vite app in a Node image
-- Serves the final static bundle with Nginx
-- Includes SPA fallback routing via `try_files`
 
 ## Test Coverage
 
@@ -252,32 +246,3 @@ This is intentionally lightweight for a prototype, but enough to protect the cor
 - Simulation is deterministic and linearized for readability
 - Single start node model is enforced
 
-## Tradeoffs
-
-- State is local to the app instead of persisted remotely
-- Simulation is mock-driven, not connected to real HR systems
-- Validation is strong for structure, but not yet a full business-rules engine
-- Prototype favors architectural clarity and working behavior over enterprise completeness
-
-## If I Had More Time
-
-- Import/export workflow JSON from file
-- Undo/redo history
-- Inline edge-level validation markers
-- Auto-layout support
-- Workflow templates
-- Persistence layer
-- Richer branching simulation UI
-- Storybook or component docs for the design system
-
-## Submission Notes
-
-This repository is intended to demonstrate:
-
-- React and TypeScript depth
-- React Flow proficiency
-- modular component architecture
-- typed API abstraction
-- dynamic form handling
-- structured validation and simulation logic
-- product-level frontend design judgment
