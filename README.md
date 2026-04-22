@@ -212,6 +212,29 @@ npm run test
 npm run build
 ```
 
+## Run With Docker
+
+### Build image
+
+```bash
+docker build -t trident-workflow-designer .
+```
+
+### Run container
+
+```bash
+docker run --rm -p 8080:80 trident-workflow-designer
+```
+
+Then open `http://localhost:8080`.
+
+### Notes
+
+- Uses a multi-stage Docker build
+- Builds the Vite app in a Node image
+- Serves the final static bundle with Nginx
+- Includes SPA fallback routing via `try_files`
+
 ## Test Coverage
 
 Focused tests currently cover:
